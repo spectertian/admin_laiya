@@ -307,4 +307,14 @@ class Lists
         return $this->updatedDate;
     }
 
+    public function getUpdatedTime(): ?\DateTime
+    {
+        return $this->updatedTime;
+    }
+
+    public function getCreatedTime(): ?\DateTime
+    {
+        return $this->createdTime;
+    }
+
 }

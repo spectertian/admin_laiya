@@ -24,6 +24,11 @@ final class ListAdmin extends AbstractAdmin
     protected function configureDatagridFilters(DatagridMapper $datagrid): void
     {
         $datagrid->add('title');
+        $datagrid->add('cId');
+        $datagrid->add('doubanId');
+        $datagrid->add('pic', null, [
+            'role' => 'ROLE_ADMIN_MODERATOR'
+        ]);//        $datagrid->add('updated_time');
     }
 
     protected function configureListFields(ListMapper $list): void
@@ -32,6 +37,12 @@ final class ListAdmin extends AbstractAdmin
         $list->addIdentifier('douban_id');
 //        $list->add('director');
         $list->add('page_date');
+        $list->add('production_date');
+        $list->add('pic', null, [
+            'role' => 'ROLE_ADMIN_MODERATOR'
+        ]);
+//        $list->add('updated_time');
+//        $list->add('created_time');
 //        $list->add('director');
     }
 
@@ -40,6 +51,12 @@ final class ListAdmin extends AbstractAdmin
         $show->add('c_id');
         $show->add('title');
         $show->add('url',);
+        $show->add('production_date',);
+        $show->add('pic', null, [
+            'role' => 'ROLE_ADMIN_MODERATOR'
+        ]);
+//        $show->add('updated_time',);
+//        $show->add('created_time',);
     }
 
 }

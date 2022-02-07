@@ -34,7 +34,27 @@ services:
 #        tags:
 #            - { name: sonata.admin, model_class: App\Document\Lists, manager_type: orm, label: Lists }
 
-    admin.list:
+#    admin.list:
+#        class: App\Admin\ListAdmin
+#        tags:
+#            - { name: sonata.admin, model_class: App\Document\Lists, manager_type: doctrine_mongodb, group: 'Content', label: List }
+    app.admin.list:
         class: App\Admin\ListAdmin
         tags:
-            - { name: sonata.admin, model_class: App\Document\Lists, manager_type: doctrine_mongodb, label: List }
+            - name: sonata.admin
+              model_class: App\Document\Lists
+              manager_type: doctrine_mongodb
+              group: 'content'
+              label: 'list'
+              label_catalogue: 'App'
+#    admin.video:
+#        class: App\Admin\VideoAdmin
+#        tags:
+#            - { name: sonata.admin, model_class: App\Document\TkList, manager_type: doctrine_mongodb, label: video }
+
+    App\Admin\VideoAdmin:
+    # tags, calls, etc
+
+    App\Admin\PlaylistAdmin:
+        calls:
+            - [ addChild, [ '@App\Admin\VideoAdmin', 'playlist' ] ]
