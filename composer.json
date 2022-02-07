@@ -8,6 +8,7 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "doctrine/mongodb-odm-bundle": "^4.4",
+        "sonata-project/doctrine-mongodb-admin-bundle": "^4.1",
         "symfony/console": "5.4.*",
         "symfony/dotenv": "5.4.*",
         "symfony/flex": "^1.17|^2",
@@ -62,5 +63,8 @@
             "allow-contrib": "true",
             "require": "5.4.*"
         }
+    },
+    "require-dev": {
+        "symfony/maker-bundle": "^1.36"
     }
 }
