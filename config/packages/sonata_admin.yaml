@@ -3,6 +3,15 @@ sonata_admin:
     dashboard:
         blocks:
             - { type: sonata.admin.block.admin_list, position: left }
+    templates:
+        # default global templates
+        layout: '@SonataAdmin/standard_layout.html.twig'
+        ajax: '@SonataAdmin/ajax_layout.html.twig'
+
+        # default value if done set, actions templates, should extend global templates
+        list: '@SonataAdmin/CRUD/list.html.twig'
+        show: '@SonataAdmin/CRUD/show.html.twig'
+        edit: '@SonataAdmin/CRUD/edit.html.twig'
 
 sonata_block:
     blocks:

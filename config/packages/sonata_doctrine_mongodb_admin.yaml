@@ -1,9 +1,11 @@
 sonata_doctrine_mongo_db_admin:
   templates:
-    form:
-      - "@SonataDoctrineMongoDBAdmin/Form/form_admin_fields.html.twig"
-    filter:
-      - "@SonataDoctrineMongoDBAdmin/Form/filter_admin_fields.html.twig"
+#    form:
+#      - "@SonataDoctrineMongoDBAdmin/Form/form_admin_fields.html.twig"
+#    filter:
+#      - "@SonataDoctrineMongoDBAdmin/Form/filter_admin_fields.html.twig"
+#    form: [ '@SonataDoctrineMongoDBAdmin/Form/form_admin_fields.html.twig' ]
+#    filter: [ '@SonataDoctrineMongoDBAdmin/Form/filter_admin_fields.html.twig' ]
     types:
       list:
         array:      "@SonataAdmin/CRUD/list_array.html.twig"

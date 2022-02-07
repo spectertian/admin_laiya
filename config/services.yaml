@@ -29,7 +29,12 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
-    admin.lists:
+#    admin.list:
+#        class: App\Admin\ListAdmin
+#        tags:
+#            - { name: sonata.admin, model_class: App\Document\Lists, manager_type: orm, label: Lists }
+
+    admin.list:
         class: App\Admin\ListAdmin
         tags:
-            - { name: sonata.admin, model_class: App\Document\Lists, manager_type: orm, label: Lists }
+            - { name: sonata.admin, model_class: App\Document\Lists, manager_type: doctrine_mongodb, label: List }

@@ -168,6 +168,16 @@ class Lists
         return $this->id;
     }
 
+    public function getCId(): ?string
+    {
+        return $this->cId;
+    }
+
+    public function getUrl(): ?string
+    {
+        return $this->url;
+    }
+
     public function getTitle(): ?string
     {
         return $this->title;
