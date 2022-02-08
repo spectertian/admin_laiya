@@ -8,19 +8,9 @@ use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Sonata\AdminBundle\Route\RouteCollectionInterface;
-use Sonata\AdminBundle\FieldDescription\FieldDescriptionInterface;
 
-
-final class ListAdmin extends AbstractAdmin
+final class VodAdmin extends AbstractAdmin
 {
-
-//    protected function configureRoutes(RouteCollectionInterface $collection): void
-//    {
-//        // Removing the list route will disable listing entities.
-//        $collection->remove('list');
-//    }
-
     protected function configureFormFields(FormMapper $form): void
     {
 //        $form->add('c_id', TextType::class);
@@ -41,28 +31,14 @@ final class ListAdmin extends AbstractAdmin
 
     protected function configureListFields(ListMapper $list): void
     {
-
-        $list->addIdentifier('title', null, [
-            'route' => [
-                'name' => 'edit'
-            ]
-        ]);
-
-//        $list->addIdentifier('title');
+        $list->addIdentifier('title');
         $list->addIdentifier('douban_id');
 //        $list->add('director');
         $list->add('page_date');
         $list->add('production_date');
-        $list->add('pic');
-
-
-//        $list->add('pic', FieldDescriptionInterface::TYPE_STRING, ['template' => '@SonataMedia/MediaAdmin/list_image.html.twig']);
-
-//        $list->add('pic', null, [
-//            'role' => 'ROLE_ADMIN_MODERATOR'
-//        ]);
-
-
+        $list->add('pic', null, [
+            'role' => 'ROLE_ADMIN_MODERATOR'
+        ]);
 //        $list->add('updated_time');
 //        $list->add('created_time');
 //        $list->add('director');

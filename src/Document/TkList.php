@@ -189,6 +189,16 @@ class TkList
         return $this->id;
     }
 
+    public function getCId(): ?string
+    {
+        return $this->cId;
+    }
+
+    public function getUrl(): ?string
+    {
+        return $this->url;
+    }
+
     public function getTitle(): ?string
     {
         return $this->title;
@@ -317,5 +327,16 @@ class TkList
     {
         return $this->updatedDate;
     }
+
+    public function getUpdatedTime(): ?\DateTime
+    {
+        return $this->updatedTime;
+    }
+
+    public function getCreatedTime(): ?\DateTime
+    {
+        return $this->createdTime;
+    }
+
 
 }

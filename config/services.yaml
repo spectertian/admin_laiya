@@ -47,6 +47,15 @@ services:
               group: 'content'
               label: 'list'
               label_catalogue: 'App'
+    app.admin.vod:
+        class: App\Admin\VodAdmin
+        tags:
+            - name: sonata.admin
+              model_class: App\Document\TkList
+              manager_type: doctrine_mongodb
+              group: 'vod'
+              label: 'list'
+              label_catalogue: 'App'
 #    admin.video:
 #        class: App\Admin\VideoAdmin
 #        tags:
